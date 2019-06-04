@@ -25,3 +25,22 @@ VALUES ("Rolex Oyster","Watches",12700,3);
 
 INSERT INTO products (product_name,department_name,price,stock_quantity)
 VALUES ("Hammer","Home Improvement",20,150);
+
+INSERT INTO products (product_name,department_name,price,stock_quantity)
+VALUES ("The Sandlot","Movies",10,40);
+
+INSERT INTO products (product_name,department_name,price,stock_quantity)
+VALUES ("12 pack Pepsi","Refreshments",7,80);
+
+INSERT INTO products (product_name,department_name,price,stock_quantity)
+VALUES ("BioShock","Electronics",30,5);
+
+INSERT INTO products (product_name,department_name,price,stock_quantity)
+VALUES ("Size 10 Mens Brooks Running Shoes","Shoes",50,25);
+
+INSERT INTO products (product_name,department_name,price,stock_quantity)
+VALUES ("Steph Curry Jersey Medium","Sports Jerseys",70,45);
+INSERT INTO products (product_name,department_name,price,stock_quantity)
+VALUES ("1965 Ford Shelby","Cars",1595000,1);
+
+SELECT * FROM products;
