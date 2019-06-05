@@ -35,12 +35,21 @@ function start() {
         message: "What would you like to buy??",
         choices: ["PS4", "Apple Watch","Callaway Epic Flash Driver", "Rolex Oyster","The Sandlot","12 pack Pepsi","BioShock", "Brooks Running Shoes", "Steph Curry Jersey","1965 Ford Shelby", "EXIT"]
       })
-    .then(function(inquirerResponse) {
-        if (inquirerResponse.confirm) {
-          console.log("" + inquirerResponse.choices + " Great Option");
+    .then(function(answer) {
+        if (answer.Introduction === "PS4", "Apple Watch","Callaway Epic Flash Driver", "Rolex Oyster","The Sandlot","12 pack Pepsi","BioShock", "Brooks Running Shoes", "Steph Curry Jersey","1965 Ford Shelby") {
+         console.log("Great Option");
+          Selection();
+    
         }
-        else {
-          console.log("Come again another time");
-        }
-      });
-}
+        else(answer.Introduction === "EXIT") 
+          console.log("leaving store");
+          connection.end();
+        });
+      }
+
+      function Selection() {
+        connection.query("SELECT * FROM products", function(err, results) {
+          if (err) throw err;
+         console.log("working on solution");
+        });
+      }
