@@ -1,7 +1,7 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
 // var choices= ["PS4", "Apple Watch","Callaway Epic Flash Driver", "Rolex Oyster","The Sandlot","12 pack Pepsi","BioShock", "Brooks Running Shoes", "Steph Curry Jersey","1965 Ford Shelby", "EXIT"];
-// var stock= [15,35,10,3,40,80,5,25,45,1];
+var stock= [15,35,10,3,40,80,5,25,45,1];
 
 
 
@@ -62,11 +62,11 @@ function start() {
     
 
       function Selection() {
-        connection.query("SELECT * FROM products", function(err, results) {
+        connection.query("SELECT stock_quantity FROM products", function(err, res) {
           if (err) throw err;
           console.log("working");
-          for (var i = 0; i <product_name; i++) {
-            if (start.inputNumber > stock_quantity) {
+          for (var i = 0; i < res.length; i++) {
+            if (start.inputNumber > stock) {
               console.log("out of stock");
               start();
             } else{
